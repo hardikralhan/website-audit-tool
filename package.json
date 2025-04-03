@@ -17,6 +17,7 @@
     "express": "^5.1.0",
     "lighthouse": "^12.5.1",
     "mongoose": "^8.13.1",
-    "puppeteer": "^24.5.0"
+    "puppeteer": "^24.5.0",
+    "ssl-checker": "^2.0.10"
   }
 }

@@ -5,8 +5,7 @@ async function checkAccessibility(url) {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle2' });
-
-  const results = await new AxePuppeteer(page).analyze();
+  const results = await new AxePuppeteer(page).withTags(['wcag2aa']).analyze();
   await browser.close();
 
   return results.violations;
